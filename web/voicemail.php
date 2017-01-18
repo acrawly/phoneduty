@@ -43,8 +43,7 @@ if (isset($_POST['RecordingUrl'])) {
     session_unset();
     session_destroy();
 } else {
-    $twilio->say("The on-call engineer isn't available. " .
-        "Please leave a message after the beep describing the issue. " .
+    $twilio->say("Please leave a message for the on call engineer. " .
         "Press any key or hang up when you are finished. ", $attributes);
 
     $twilio->record(array(
